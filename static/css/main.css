@@ -217,20 +217,31 @@ footer {
     align-items: center;
     border-top: 0.4rem dotted var(--bordercl);
     padding: 2rem 0rem;
+    padding-top: 1rem;
+    flex-wrap: wrap;
     margin-top: 2rem;
 }
 
 .soc {
     display: flex;
     align-items: center;
-    padding-right: 1rem;
-    margin-right: 1rem;
-    border-right: 2px solid;
+    margin: 0rem 0.5rem;
     border-bottom: none;
 }
 
 .footer-info {
+    margin: 0rem 0.5rem;
     padding: var(--footer-padding);
+    text-align: center;
+}
+
+.footer-line {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    margin: 0.3rem 0rem;
+    line-height: 1.2rem;
 }
 
 #main_title {

@@ -1,14 +1,30 @@
 <footer>
-  <div style="display:flex">
+  <div class="footer-line">
     {% for social in config.extra.social %}
         <a class="soc" href={{ social.url }} title={{ social.name }}>
             <i data-feather={{ social.icon }}></i>
         </a>
+        <div style="border: 1px solid;"></div>
     {% endfor %}
+    <div class="footer-info">
+      Powered by <a href="https://github.com/XXXMrG/archie-zola">Archie</a>, <a href="https://github.com/getzola/zola">Zola</a>, <a href="https://www.netlify.com/">Netlify</a>
+    </div>
   </div>
-  <div class="footer-info">
-    {{ now() | date(format="%Y") }} © {{ config.extra.copyright }} | <a
-      href="https://github.com/XXXMrG/archie-zola">Archie-Zola Theme</a>
+  <div class="footer-line">
+  </div>
+
+  <div class="footer-line">
+  </div>
+
+  <div class="footer-line">
+    <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/" style="border:none"><img alt="Creative Commons License"
+        style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/80x15.png" /></a> 
+    <div class="footer-line">
+      <p style="margin: 0; color:gray; text-align:center; font-family:sans-serif; font-size:smaller; width:100%; max-width: 540px">
+        Except where otherwise noted, content on this site is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/" style="border: none;">Creative
+          Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>.
+      </p>
+    </div>
   </div>
 </footer>
 
