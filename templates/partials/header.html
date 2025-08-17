@@ -118,7 +118,19 @@
     {% endif %}
 
 
-    {# TODO: custom css and js. #}
+    {# Include custom CSS files #}
+    {% if config.extra.custom_css %}
+        {% for css_file in config.extra.custom_css %}
+            <link rel="stylesheet" type="text/css" media="screen" href="{{ get_url(path=css_file) }}" />
+        {% endfor %}
+    {% endif %}
+
+    {# Include custom JS files #}
+    {% if config.extra.custom_js %}
+        {% for js_file in config.extra.custom_js %}
+            <script src="{{ get_url(path=js_file) }}"></script>
+        {% endfor %}
+    {% endif %}
 
 
 </head>

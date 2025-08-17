@@ -60,17 +60,16 @@ Finally, check your commit and push it.
 - Google Analytics Script
 - Meta Tags For Individual Pages
 - Support Latex.
+- Custom CSS & JS
 
 in the planning stage：
-
-- [ ] Custom CSS & JS
 - [ ] Twitter Cards & Youtube video
 
 ## Config
 
 ### Customize `<meta/>` tags
 
-The following TOML and YAML code will yiled two `<meta/>` tags, `<meta property="og:title" content="the og title"/>`, `<meta property="og:description" content="the og description"/>`.
+The following TOML and YAML code will yield two `<meta/>` tags, `<meta property="og:title" content="the og title"/>`, `<meta property="og:description" content="the og description"/>`.
 
 TOML:
 
@@ -167,7 +166,45 @@ url = "https://github.com/your-name/"
 icon = "gitlab"
 name = "GitLab"
 url = "https://gitlab.com/your-name/"
+```
 
+### Custom CSS & JS
+
+You can include custom CSS and JavaScript files by adding them to your `config.toml`:
+
+```toml
+[extra]
+# Custom CSS files to include
+custom_css = [
+    "css/custom.css",
+    "css/my-theme.css"
+]
+
+# Custom JS files to include
+custom_js = [
+    "js/custom.js",
+    "js/analytics.js"
+]
+```
+
+**Usage:**
+
+1. Place your CSS files in the `static/css/` directory
+2. Place your JS files in the `static/js/` directory
+3. Add their paths to the `custom_css` or `custom_js` arrays in your `config.toml`
+4. Rebuild your site with `zola build`
+
+The files will be automatically included in the `<head>` section of all pages, with CSS files loaded as stylesheets and JS files loaded as scripts.
+
+**Example file structure:**
+```
+static/
+├── css/
+│   ├── custom.css
+│   └── my-theme.css
+└── js/
+    ├── custom.js
+    └── analytics.js
 ```
 
 ### Latex math formula support
